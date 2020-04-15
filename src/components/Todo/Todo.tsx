@@ -29,18 +29,20 @@ export const Todo = (props: TodoInterface) => {
     <StyledTodo {...props}>
       <p>Title: {props.text}</p>
       <Button
-        text="complete"
         onClick={(e: Event) => {
           props.CompleteTodo(props.id);
         }}
-      ></Button>
+      >
+        Complete
+      </Button>
       <Button
         danger
-        text="delete"
         onClick={(e: Event) => {
           props.DeleteTodo(props.id);
         }}
-      ></Button>
+      >
+        Delete
+      </Button>
     </StyledTodo>
   );
 };
