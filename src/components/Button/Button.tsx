@@ -9,17 +9,17 @@ export interface ButtonInterface {
 }
 
 export const Button = (props: ButtonInterface) => {
-  const Button = styled("button")<{ primary?: any; danger?: any }>`
+  const StyledButton = styled.button<ButtonInterface>`
     background: transparent;
-    color: palegreen;
-    border: 2px solid palegreen;
+    color: lightblue;
+    border: 2px solid lightblue;
     border-radius: 5px;
     padding: 1em;
 
     ${(props) =>
       props.primary &&
       css`
-        background: palegreen;
+        background: lightblue;
         color: white;
       `}
 
@@ -32,5 +32,5 @@ export const Button = (props: ButtonInterface) => {
       `}
   `;
 
-  return <Button {...props}>{props.text}</Button>;
+  return <StyledButton {...props}>{props.text}</StyledButton>;
 };
