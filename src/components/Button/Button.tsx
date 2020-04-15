@@ -1,5 +1,3 @@
-import React from "react";
-
 import styled, { css } from "styled-components";
 
 export interface ButtonInterface {
@@ -14,19 +12,18 @@ export const StyledButton = styled.button<ButtonInterface>`
   border: 2px solid lightblue;
   border-radius: 5px;
   padding: 1em;
-
+  margin-right: 10px;
   ${(props) =>
     props.primary &&
     css`
       background: lightblue;
       color: white;
     `}
-
   ${(props) =>
     props.danger &&
     css`
       background: palevioletred;
       border: 2px solid palevioletred;
       color: white;
-    `}
+    `};
 `;

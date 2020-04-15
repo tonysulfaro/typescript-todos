@@ -11,22 +11,23 @@ export interface TodoInterface {
   DeleteTodo: Function;
 }
 
-const StyledTodo = styled.div<TodoInterface>`
+const Container = styled.div<TodoInterface>`
   box-shadow: 5px 5px 5px 5px lightgray;
   border-radius: 5px;
   width: 50%;
   padding: 1em;
+  margin: 10px;
 
   ${(props) =>
     props.completed &&
     css`
       text-decoration: line-through;
-    `}
+    `};
 `;
 
 export const Todo = (props: TodoInterface) => {
   return (
-    <StyledTodo {...props}>
+    <Container {...props}>
       <p>Title: {props.text}</p>
       <Button
         onClick={(e: Event) => {
@@ -43,6 +44,6 @@ export const Todo = (props: TodoInterface) => {
       >
         Delete
       </Button>
-    </StyledTodo>
+    </Container>
   );
 };
