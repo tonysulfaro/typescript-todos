@@ -7,6 +7,7 @@ function App() {
     <div className="App">
       <Button text="normal button"></Button>
       <Button primary={true} text="primary button"></Button>
+      <Button danger={true} text="danger button"></Button>
     </div>
   );
 }
