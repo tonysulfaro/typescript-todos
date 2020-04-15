@@ -6,8 +6,8 @@ function App() {
   return (
     <div className="App">
       <Button text="normal button"></Button>
-      <Button primary={true} text="primary button"></Button>
-      <Button danger={true} text="danger button"></Button>
+      <Button primary text="primary button"></Button>
+      <Button danger text="danger button"></Button>
     </div>
   );
 }

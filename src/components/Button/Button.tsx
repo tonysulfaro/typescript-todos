@@ -4,12 +4,12 @@ import styled, { css } from "styled-components";
 
 export interface ButtonInterface {
   text: String;
-  primary?: boolean;
-  danger?: boolean;
+  primary?: any;
+  danger?: any;
 }
 
 export const Button = (props: ButtonInterface) => {
-  const Button = styled("button")<{ primary?: boolean; danger?: boolean }>`
+  const Button = styled("button")<{ primary?: any; danger?: any }>`
     background: transparent;
     color: palegreen;
     border: 2px solid palegreen;
