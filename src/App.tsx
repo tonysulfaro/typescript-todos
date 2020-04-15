@@ -12,8 +12,6 @@ function App() {
     let newTodos: any[] = [];
 
     todos.forEach((todo) => {
-      console.log(todo);
-
       if (todo.id === id) {
         todo.completed = !todo.completed;
         newTodos.push(todo);
@@ -33,6 +31,7 @@ function App() {
     <div className="App">
       {todos.map((todo) => (
         <Todo
+          key={todo.id}
           id={todo.id}
           text={todo.text}
           completed={todo.completed}

@@ -11,20 +11,20 @@ export interface TodoInterface {
   DeleteTodo: Function;
 }
 
+const StyledTodo = styled.div<TodoInterface>`
+  box-shadow: 5px 5px 5px 5px lightgray;
+  border-radius: 5px;
+  width: 50%;
+  padding: 1em;
+
+  ${(props) =>
+    props.completed &&
+    css`
+      text-decoration: line-through;
+    `}
+`;
+
 export const Todo = (props: TodoInterface) => {
-  const StyledTodo = styled.div<TodoInterface>`
-    box-shadow: 5px 5px 5px 5px lightgray;
-    border-radius: 5px;
-    width: 50%;
-    padding: 1em;
-
-    ${(props) =>
-      props.completed &&
-      css`
-        text-decoration: line-through;
-      `}
-  `;
-
   return (
     <StyledTodo {...props}>
       <p>Title: {props.text}</p>
