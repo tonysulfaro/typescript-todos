@@ -4,8 +4,11 @@ import styled, { css } from "styled-components";
 import Button from "../Button";
 
 export interface TodoInterface {
+  id: any;
   text: String;
   completed: boolean;
+  CompleteTodo: Function;
+  DeleteTodo: Function;
 }
 
 export const Todo = (props: TodoInterface) => {
@@ -22,28 +25,20 @@ export const Todo = (props: TodoInterface) => {
       `}
   `;
 
-  function CompleteTodo() {
-    alert("complete todo");
-  }
-
-  function DeleteTodo() {
-    alert("delete todo");
-  }
-
   return (
     <StyledTodo {...props}>
       <p>Title: {props.text}</p>
       <Button
         text="complete"
-        onClick={(e: any) => {
-          CompleteTodo();
+        onClick={(e: Event) => {
+          props.CompleteTodo(props.id);
         }}
       ></Button>
       <Button
         danger
         text="delete"
-        onClick={(e: any) => {
-          DeleteTodo();
+        onClick={(e: Event) => {
+          props.DeleteTodo(props.id);
         }}
       ></Button>
     </StyledTodo>
