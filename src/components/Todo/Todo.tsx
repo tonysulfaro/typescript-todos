@@ -3,7 +3,7 @@ import React from "react";
 import styled, { css } from "styled-components";
 import Button from "../Button";
 
-export interface TodoInterface {
+export interface ITodo {
   id: any;
   text: String;
   completed: boolean;
@@ -11,7 +11,7 @@ export interface TodoInterface {
   DeleteTodo: Function;
 }
 
-const Container = styled.div<TodoInterface>`
+const Container = styled.div<ITodo>`
   border: 2px solid lightgray;
   border-radius: 5px;
   width: 45%;
@@ -25,7 +25,7 @@ const Container = styled.div<TodoInterface>`
     `};
 `;
 
-export const Todo = (props: TodoInterface) => {
+export const Todo = (props: ITodo) => {
   return (
     <Container {...props}>
       <p>{props.text}</p>

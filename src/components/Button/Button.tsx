@@ -1,12 +1,12 @@
 import styled, { css } from "styled-components";
 
-export interface ButtonInterface {
+export interface IButton {
   primary?: any;
   danger?: any;
   onClick?: any;
 }
 
-export const StyledButton = styled.button<ButtonInterface>`
+export const StyledButton = styled.button<IButton>`
   background: transparent;
   color: lightblue;
   border: 2px solid lightblue;
