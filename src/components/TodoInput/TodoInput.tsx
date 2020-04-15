@@ -11,7 +11,7 @@ export interface ITodoInput {
 const Container = styled.div<ITodoInput>`
   box-shadow: 5px 5px 5px 5px lightgray;
   border-radius: 5px;
-  width: 50%;
+  width: 95%;
   padding: 1em;
   margin: 10px;
 `;
@@ -19,6 +19,7 @@ const Container = styled.div<ITodoInput>`
 const StyledInput = styled.input`
   padding: 1em;
   border-radius: 5px;
+  margin-right: 10px;
 `;
 
 export const TodoInput = (props: ITodoInput) => {
@@ -35,7 +36,12 @@ export const TodoInput = (props: ITodoInput) => {
       <Button
         primary
         onClick={() => {
+          if (todo === "") {
+            return;
+          }
+
           props.AddTodo(todo);
+          settodo("");
         }}
       >
         Add Todo

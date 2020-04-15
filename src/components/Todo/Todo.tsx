@@ -14,7 +14,7 @@ export interface TodoInterface {
 const Container = styled.div<TodoInterface>`
   box-shadow: 5px 5px 5px 5px lightgray;
   border-radius: 5px;
-  width: 50%;
+  width: 95%;
   padding: 1em;
   margin: 10px;
 
