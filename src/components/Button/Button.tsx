@@ -6,6 +6,7 @@ export interface ButtonInterface {
   text: String;
   primary?: any;
   danger?: any;
+  onClick?: any;
 }
 
 export const Button = (props: ButtonInterface) => {

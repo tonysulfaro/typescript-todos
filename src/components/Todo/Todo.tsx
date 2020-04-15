@@ -22,11 +22,30 @@ export const Todo = (props: TodoInterface) => {
       `}
   `;
 
+  function CompleteTodo() {
+    alert("complete todo");
+  }
+
+  function DeleteTodo() {
+    alert("delete todo");
+  }
+
   return (
     <StyledTodo {...props}>
       <p>Title: {props.text}</p>
-      <Button text="complete"></Button>
-      <Button danger text="delete"></Button>
+      <Button
+        text="complete"
+        onClick={(e: any) => {
+          CompleteTodo();
+        }}
+      ></Button>
+      <Button
+        danger
+        text="delete"
+        onClick={(e: any) => {
+          DeleteTodo();
+        }}
+      ></Button>
     </StyledTodo>
   );
 };
