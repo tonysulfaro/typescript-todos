@@ -12,9 +12,9 @@ export interface TodoInterface {
 }
 
 const Container = styled.div<TodoInterface>`
-  box-shadow: 5px 5px 5px 5px lightgray;
+  border: 2px solid lightgray;
   border-radius: 5px;
-  width: 95%;
+  width: 45%;
   padding: 1em;
   margin: 10px;
 
@@ -28,7 +28,7 @@ const Container = styled.div<TodoInterface>`
 export const Todo = (props: TodoInterface) => {
   return (
     <Container {...props}>
-      <p>Title: {props.text}</p>
+      <p>{props.text}</p>
       <Button
         onClick={(e: Event) => {
           props.CompleteTodo(props.id);

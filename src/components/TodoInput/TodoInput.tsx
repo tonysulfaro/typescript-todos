@@ -9,7 +9,7 @@ export interface ITodoInput {
 }
 
 const Container = styled.div<ITodoInput>`
-  box-shadow: 5px 5px 5px 5px lightgray;
+  border: 2px solid lightgray;
   border-radius: 5px;
   width: 95%;
   padding: 1em;
