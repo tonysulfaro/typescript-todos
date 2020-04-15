@@ -19,7 +19,7 @@ function App() {
     setTodos(newTodos);
   }
 
-  function CompleteTodo(id: any) {
+  function CompleteTodo(id: string) {
     let newTodos: any[] = [];
 
     todos.forEach((todo: ITodo) => {
@@ -34,8 +34,16 @@ function App() {
     });
   }
 
-  function DeleteTodo(id: any) {
-    alert("delete todo" + id);
+  function DeleteTodo(id: string) {
+    let newTodos: any[] = [];
+
+    todos.forEach((todo: ITodo) => {
+      if (todo.id !== id) {
+        newTodos.push(todo);
+      }
+
+      setTodos(newTodos);
+    });
   }
 
   return (
